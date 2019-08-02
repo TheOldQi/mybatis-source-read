@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qixiafei.mybatis.source.read.mapper.IdxTestMapper">
+
+    <resultMap id="baseMap" type="com.qixiafei.mybatis.source.read.po.IdxTestPo">
+        <id property="id" column="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <select id="listAll" resultMap="baseMap">
+        select *
+        from idx_test
+        limit 1000
+    </select>
+</mapper>
